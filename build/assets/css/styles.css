@@ -1,0 +1,24 @@
+body {
+	background-color: #b3e3ff;
+}
+.container {
+  position:relative;
+  width:40%;
+  height: 800px;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 6px;
+  background-color: whitesmoke;
+}
+.header-block {
+	width: 100%;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	background-color: #12617b;
+
+}
