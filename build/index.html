@@ -1,29 +1,56 @@
 <!DOCTYPE HTML>
 <HTML>
-   <HEAD>
-    	<TITLE>AUX Form Challenge</TITLE>
-    	<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
-   </HEAD>
-   <BODY>
-	   <div class="container">
-	   	<div class="header-block">
+	<HEAD>
+		<TITLE>AUX Form Challenge</TITLE>
+		<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+	</HEAD>
+	<BODY>
+		<div class="container">
+			<div class="header-block"></div>
+			
+			<div class="form-block">
+				<form action="#" method="post">
+					<fieldset class="fieldset">
+						<legend>First, name your portfolio</legend>
+						<label>Portfolio title</label>
+						<input type="text" name="portfolio title">
+						<br />
+						<label>Portfolio address</label>
+						<input type="text" name="portfolio address">
+						<br />
+					</fieldset>
 
-	   		<form>
+					<fieldset class="fieldset">
+						<legend>Now, enter your account details</legend>
+						<label>Name</label>
+						<input type="text" name="name">
+						<br />
+						<label>Email</label>
+						<input type="email" name="email">
+						<br />
+						<label>Password</label>
+						<input type="password" name="password">
+						<br />
+					</fieldset>
 
-		   		<fieldset class="">
-		   			<legend>
-							<!-- defines the fieldset -->
-		   			</legend>
-						<section>
-							<!-- labels
-							inputs -->
-						</section>
-		   		</fieldset>
+					<fieldset class="fieldset">
+						<legend>Finally, enter your payment information</legend>
+						<label>Card number</label>
+						<input type="text" name="card number">
+						<br />
+						<label>Security code</label>
+						<input type="text" name="security code">
+						<br />
+						<label>Expiration date</label>
+						<input type="text" name="expiration date">
+					</fieldset>
 
-	   		</form>
+					<button class="submit-button" type="submit">Create your portfolio</button>
 
-	   	</div>
-	   </div>
+				</form>
+			</div>
 
-   </BODY>
+		</div>
+
+	</BODY>
 </HTML>
