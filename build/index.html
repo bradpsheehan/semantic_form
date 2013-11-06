@@ -6,69 +6,86 @@
 	</HEAD>
 	<BODY>
 		<div class="container">
-			<div class="header-block"></div>
+			<div class="header-block">
+				<div class="header-content">
+					<h1>Sign up for Whoo!</h1>
+					<p>50 projects, 500 images, 10 videos, domain binding, and technical support</p>
+				</div>
+			</div>
 			
 			<div class="form-block">
 				<form action="#" method="post">
-					<fieldset class="fieldset">
-						<legend>First, name your portfolio</legend>
-						<label>Portfolio title</label>
-						<input type="text" name="portfolio-title">
-						<br />
-						<label>Portfolio address</label>
-						<input type="text" name="portfolio-address">
-						<br />
+					<fieldset class="fieldset" data-number="1">
+						<legend class="legend">First, name your portfolio</legend>
+						<div class="block">
+							<label for="portfolio-title">Portfolio title</label>
+							<input class="input-border" type="text" name="portfolio-title" id="portfolio-title">
+								<br />
+							<label for="portfolio-address">Portfolio address</label>
+							<input class="input-border" type="text" name="portfolio-address" id="portfolio-address">
+								<br />
+						</div>
 					</fieldset>
 
 					<fieldset class="fieldset">
-						<legend>Now, enter your account details</legend>
-						<label>Name</label>
-						<input type="text" name="name">
-						<br />
-						<label>Email</label>
-						<input type="email" name="email">
-						<br />
-						<label>Password</label>
-						<input type="password" name="password">
-						<br />
+						<legend class="legend">Now, enter your account details</legend>
+						<div class="block">
+							<label for="name">Name</label>
+							<input class="input-border" type="text" name="name" id="name">
+								<br />
+							<label for="email">Email</label>
+							<input class="input-border" type="email" name="email" id="email">
+								<br />
+							<label for="password">Password</label>
+							<input class="input-border" type="password" name="password" id="password">
+								<br />
+						</div>
 					</fieldset>
 
 					<fieldset class="fieldset">
-						<legend>Finally, enter your payment information</legend>
-						<label>Card number</label>
-						<input type="text" name="card-number">
-						<br />
-						<label>Security code</label>
-						<input type="text" name="security-code">
-						<br />
-						<label>Expiration date</label>
-						<select name="month" id="month">
-							<option value="january">January</option>
-							<option value="february">February</option>
-							<option value="march">March</option>
-							<option value="april">April</option>
-							<option value="may">May</option>
-							<option value="june">June</option>
-							<option value="july">July</option>
-							<option value="august">August</option>
-							<option value="september">September</option>
-							<option value="october">October</option>
-							<option value="november">November</option>
-							<option value="december">December</option>
-						</select>
-						<select name="year" id="year">
-							<option value="2013">2013</option>
-							<option value="2014">2014</option>
-							<option value="2015">2015</option>
-							<option value="2016">2016</option>
-							<option value="2017">2017</option>
-							<option value="2018">2018</option>
-							<option value="2019">2019</option>
-							<option value="2020">2020</option>
-							<option value="2021">2021</option>
-							<option value="2022">2022</option>
-							
-						</select>
+						<legend class="legend">Finally, enter your payment information</legend>
+						<div class="block">
+							<label for="credit-card-number">Card number</label>
+							<input class="input-border" type="text" name="credit-card-number" id="credit-card-number">
+							<br />
+							<label for="credit-card-security-code">Security code</label>
+							<input class="input-border" type="text" name="credit-card-security-code" id="credit-card-security-code">
+							<br />
+							<fieldset class="fieldset expiration-date">
+								<legend>Expiration date</legend>
+								<label for="month"</label>
+								<br />
+								<select name="month" id="month">
+									<option value="">month</option>
+									<option value="january">January</option>
+									<option value="february">February</option>
+									<option value="march">March</option>
+									<option value="april">April</option>
+									<option value="may">May</option>
+									<option value="june">June</option>
+									<option value="july">July</option>
+									<option value="august">August</option>
+									<option value="september">September</option>
+									<option value="october">October</option>
+									<option value="november">November</option>
+									<option value="december">December</option>
+								</select>
+								<label for="year"</label>
+								<select name="year" id="year">
+									<option value="">year</option>
+									<option value="2013">2013</option>
+									<option value="2014">2014</option>
+									<option value="2015">2015</option>
+									<option value="2016">2016</option>
+									<option value="2017">2017</option>
+									<option value="2018">2018</option>
+									<option value="2019">2019</option>
+									<option value="2020">2020</option>
+									<option value="2021">2021</option>
+									<option value="2022">2022</option>
+								</select>
+							</fieldset>
+						</div>
 					</fieldset>
 
 					<button class="submit-button" type="submit">Create your portfolio</button>

@@ -1,0 +1,125 @@
+@import "reset";
+
+body {
+	background-color: #b3e3ff;
+}
+h1 {
+  font-size: 30px;
+  color: white;
+}
+%h2,
+h2 {
+  font-size: 20px;
+}
+.legend {
+  @extend %h2;
+  color: #436577;
+}
+.container {
+  position:relative;
+  width: 600px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding-bottom: 2%;
+}
+.header-block {
+	width: 100%;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	height: 100px;
+	top: 0;
+	background-color: #12617b;
+}
+.form-block {
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 80%;
+  position: relative;
+}
+
+.circle {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-border-radius: 36px;
+  -moz-border-radius: 36px;
+  border-radius: 36px;
+  width: 36px;
+  height: 36px;
+  padding: 7px;
+  position: absolute;
+  left: -75px;
+  background: #18A7D6;
+  color: #fff;
+  text-align: center;
+  top: -5px;
+  border: 5px #ffffff solid;
+  font-size: 12px;
+}
+
+.fieldset {
+  border: 0;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: attr(data-number);
+    display: inline-block;
+    @extend .circle;
+    z-index: 10;
+  }
+
+  .fieldset {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.block {
+  margin-bottom: 5%;
+  background-color: #f3f5f5;
+  border-radius: 6px;
+  padding-top: 5%; 
+  padding-bottom: 5%; 
+}
+
+.submit-button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 20%;
+}
+label {
+  margin-left: 32px;
+}
+input {
+  width: 85%;
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-style: none;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.input-border {
+  border-top: 2px solid #E4E4E4;
+}
+.expiration-date {
+  margin-left: 21px;
+}
+.header-content {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 450px;
+}
