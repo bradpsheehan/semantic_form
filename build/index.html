@@ -13,10 +13,10 @@
 					<fieldset class="fieldset">
 						<legend>First, name your portfolio</legend>
 						<label>Portfolio title</label>
-						<input type="text" name="portfolio title">
+						<input type="text" name="portfolio-title">
 						<br />
 						<label>Portfolio address</label>
-						<input type="text" name="portfolio address">
+						<input type="text" name="portfolio-address">
 						<br />
 					</fieldset>
 
@@ -36,13 +36,39 @@
 					<fieldset class="fieldset">
 						<legend>Finally, enter your payment information</legend>
 						<label>Card number</label>
-						<input type="text" name="card number">
+						<input type="text" name="card-number">
 						<br />
 						<label>Security code</label>
-						<input type="text" name="security code">
+						<input type="text" name="security-code">
 						<br />
 						<label>Expiration date</label>
-						<input type="text" name="expiration date">
+						<select name="month" id="month">
+							<option value="january">January</option>
+							<option value="february">February</option>
+							<option value="march">March</option>
+							<option value="april">April</option>
+							<option value="may">May</option>
+							<option value="june">June</option>
+							<option value="july">July</option>
+							<option value="august">August</option>
+							<option value="september">September</option>
+							<option value="october">October</option>
+							<option value="november">November</option>
+							<option value="december">December</option>
+						</select>
+						<select name="year" id="year">
+							<option value="2013">2013</option>
+							<option value="2014">2014</option>
+							<option value="2015">2015</option>
+							<option value="2016">2016</option>
+							<option value="2017">2017</option>
+							<option value="2018">2018</option>
+							<option value="2019">2019</option>
+							<option value="2020">2020</option>
+							<option value="2021">2021</option>
+							<option value="2022">2022</option>
+							
+						</select>
 					</fieldset>
 
 					<button class="submit-button" type="submit">Create your portfolio</button>
