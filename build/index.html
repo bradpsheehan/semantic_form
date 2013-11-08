@@ -15,21 +15,19 @@
 			</div>
 			
 			<div class="form-block">
-				<form action="#" method="post">
+				<form action="#" method="post" class="s">
 					<fieldset class="fieldset" data-number="1">
 						<legend class="legend">First, name your portfolio</legend>
 						<div class="block">
 
-							<label class="label" for="portfolio-title">Portfolio title</label>
-							<input class="input input-border" type="text" name="portfolio-title">
-								<br />
+							<label for="portfolio-title">Portfolio title</label>
+							<input class="input input-border" type="text" name="portfolio-title" id="portfolio-title">
 
 							<label for="portfolio-address">Portfolio address</label>
 							<div class="input-append">
-								<input class="pull-left" type="text" name="portfolio-address">
+								<input class="pull-left" type="text" name="portfolio-address" id="portfolio-address">
 								<label class="add-on pull-left" for="portfolio-address">.sample.com</label>
 							</div>
-								<br />
 
 						</div>
 					</fieldset>
@@ -38,17 +36,14 @@
 						<legend class="legend">Now, enter your account details</legend>
 						<div class="block">
 
-							<label class="label" for="name">Name</label>
-							<input class="input input-border" type="text" name="name">
-								<br />
+							<label for="name">Name</label>
+							<input class="input input-border" type="text" name="name" id="name">
 
-							<label class="label" for="email">Email</label>
-							<input class="input input-border" type="email" name="email">
-								<br />
+							<label for="email">Email</label>
+							<input class="input input-border" type="email" name="email" id="email">
 
-							<label class="label" for="password">Password</label>
-							<input class="input input-border" type="password" name="password">
-								<br />
+							<label for="password">Password</label>
+							<input class="input input-border" type="password" name="password" id="password">
 
 						</div>
 					</fieldset>
@@ -57,35 +52,33 @@
 						<legend class="legend">Finally, enter your payment information</legend>
 						<div class="block">
 
-							<label class="label" for="credit-card-number">Card number</label>
-							<input class="input input-border" type="text" name="credit-card-number">
-							<br />
+							<label for="credit-card-number">Card number</label>
+							<input class="input input-border" type="text" name="credit-card-number" id="credit-card-number">
 
-							<label class="label" for="credit-card-security-code">Security code</label>
-							<input class="input input-border" type="text" name="credit-card-security-code">
-							<br />
+							<label for="credit-card-security-code">Security code</label>
+							<input class="input input-border" type="text" name="credit-card-security-code" id="credit-card-security-code">
 
 							<fieldset class="fieldset expiration-date">
 								<legend>Expiration date</legend>
-								<label class="label" for="month"</label>
+								<label class="label hide" for="month">month</label>
 								<br />
 								<select name="month" id="month">
 									<option value="">month</option>
-									<option value="january">January</option>
-									<option value="february">February</option>
-									<option value="march">March</option>
-									<option value="april">April</option>
-									<option value="may">May</option>
-									<option value="june">June</option>
-									<option value="july">July</option>
-									<option value="august">August</option>
-									<option value="september">September</option>
-									<option value="october">October</option>
-									<option value="november">November</option>
-									<option value="december">December</option>
+									<option value="january">01-January</option>
+									<option value="february">02-February</option>
+									<option value="march">03-March</option>
+									<option value="april">04-April</option>
+									<option value="may">05-May</option>
+									<option value="june">06-June</option>
+									<option value="july">07-July</option>
+									<option value="august">08-August</option>
+									<option value="september">09-September</option>
+									<option value="october">10-October</option>
+									<option value="november">11-November</option>
+									<option value="december">12-December</option>
 								</select>
 
-								<label class="label" for="year"</label>
+								<label class="label hide" for="year">year</label>
 								<select name="year" id="year">
 									<option value="">year</option>
 									<option value="2013">2013</option>

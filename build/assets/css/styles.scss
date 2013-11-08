@@ -89,12 +89,16 @@ h2 {
     content: attr(data-number);
     display: inline-block;
     @extend .circle;
-    z-index: 10;
   }
 
   .fieldset {
     &:before {
       display: none;
+    };
+    margin-left: 35px;
+    @extend label;
+    legend {
+      margin-bottom: -25px;
     }
   }
 }
@@ -109,6 +113,9 @@ h2 {
   height: 25px;
   min-width: 16px;
   width: auto;
+  label {
+    margin: 0;
+  };
   input {
     border-style: none;
     border-top: 2px solid #E4E4E4;
@@ -118,7 +125,7 @@ h2 {
     margin-right: 0;
     margin-left: 35px;
     width: 310px;
-  }
+  };
 }
 .add-on {
   border-top: 2px solid #E4E4E4;
@@ -141,25 +148,36 @@ h2 {
   display: block;
   width: 20%;
 }
-.label {
+label {
   color: #12617b;
   font-size: 12px;
   line-height: 25px;
   margin-left: 32px;
   text-shadow: 1px 1px white;
 }
-.input {
+input[type="text"], input[type=email], input[type="password"], button[type="submit"], textarea, select { 
+    outline: none;
+};
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, button[type="submit"]:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+  transition: box-shadow 0.60s ease-in;
+  -webkit-transition: box-shadow 0.60s ease-in-out;
+  -moz-transition: box-shadow 0.60s ease-in-out;
+  -ms-transition: box-shadow 0.60s ease-in-out;
+  -o-transition: box-shadow 0.60s ease-in-out;
+}
+input {
   width: 410px;
   margin-left: auto;
   margin-right: auto;
   border-style: none;
   display: block;
+  margin-bottom: 15px;
 }
 .input-border {
   border-top: 2px solid #E4E4E4;
   border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
   height: 25px;
 }
 .expiration-date {
@@ -167,4 +185,9 @@ h2 {
 }
 .pull-left {
   float: left;
+}
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }
