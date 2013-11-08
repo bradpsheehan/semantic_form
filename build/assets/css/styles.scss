@@ -17,6 +17,9 @@ h2 {
   color: #436577;
   margin-bottom: 10px;
 }
+.subdomain {
+
+}
 .container {
   border-radius: 6px;
   background-color: #ffffff;
@@ -95,7 +98,6 @@ h2 {
     }
   }
 }
-
 .block {
   margin-bottom: 5%;
   background-color: #f3f5f5;
@@ -103,30 +105,66 @@ h2 {
   padding-top: 5%; 
   padding-bottom: 5%; 
 }
-
+.input-append {
+  height: 25px;
+  min-width: 16px;
+  width: auto;
+  input {
+    border-style: none;
+    border-top: 2px solid #E4E4E4;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: 25px;
+    margin-right: 0;
+    margin-left: 35px;
+    width: 310px;
+  }
+}
+.add-on {
+  border-top: 2px solid #E4E4E4;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #8f8f96;
+  width: auto;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #fafafa;
+}
 .submit-button {
   margin-left: auto;
   margin-right: auto;
   display: block;
   width: 20%;
 }
-label {
+.label {
+  color: #12617b;
+  font-size: 12px;
+  line-height: 25px;
   margin-left: 32px;
+  text-shadow: 1px 1px white;
 }
-input {
-  width: 85%;
-  height: 25px;
+.input {
+  width: 410px;
   margin-left: auto;
   margin-right: auto;
-  display: block;
   border-style: none;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  display: block;
 }
 .input-border {
   border-top: 2px solid #E4E4E4;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  height: 25px;
 }
 .expiration-date {
   margin-left: 21px;
+}
+.pull-left {
+  float: left;
 }
