@@ -88,7 +88,11 @@ h2 {
   width: 485px; }
   .header-content h1 {
     font-family: Antic Slab;
-    color: #b3e3ff; }
+    color: white;
+    margin-bottom: 5px; }
+  .header-content p {
+    color: #b3e3ff;
+    font-size: 14px; }
 
 .form-block {
   margin-top: 5%;
