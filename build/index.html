@@ -4,6 +4,7 @@
 		<TITLE>AUX Form Challenge</TITLE>
 		<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
 		<link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="./assets/js/lib/modernizr.js"></script>
 	</HEAD>
 	<BODY>
 		<div class="container">
@@ -15,20 +16,18 @@
 			</div>
 			
 			<div class="form-block">
-				<form action="#" method="post" class="s">
+				<form action="#" method="post" id="portfolio-form">
 					<fieldset class="fieldset" data-number="1">
 						<legend class="legend">First, name your portfolio</legend>
 						<div class="block">
-
 							<label for="portfolio-title">Portfolio title</label>
-							<input class="input input-border" type="text" name="portfolio-title" id="portfolio-title">
+							<input class="input input-border" type="text" name="portfolio-title" id="portfolio-title" required="required">
 
 							<label for="portfolio-address">Portfolio address</label>
 							<div class="input-append">
-								<input class="pull-left" type="text" name="portfolio-address" id="portfolio-address">
+								<input class="pull-left" type="text" name="portfolio-address" id="portfolio-address" required="required">
 								<label class="add-on pull-left" for="portfolio-address">.sample.com</label>
 							</div>
-
 						</div>
 					</fieldset>
 
@@ -37,13 +36,13 @@
 						<div class="block">
 
 							<label for="name">Name</label>
-							<input class="input input-border" type="text" name="name" id="name">
+							<input class="input input-border" type="text" name="name" id="name" required="required">
 
 							<label for="email">Email</label>
-							<input class="input input-border" type="email" name="email" id="email">
+							<input class="input input-border" type="email" name="email" id="email" required="required">
 
 							<label for="password">Password</label>
-							<input class="input input-border" type="password" name="password" id="password">
+							<input class="input input-border" type="password" name="password" id="password" required="required">
 
 						</div>
 					</fieldset>
@@ -53,16 +52,16 @@
 						<div class="block">
 
 							<label for="credit-card-number">Card number</label>
-							<input class="input input-border" type="text" name="credit-card-number" id="credit-card-number">
+							<input class="input input-border" type="text" name="credit-card-number" id="credit-card-number" required="required">
 
 							<label for="credit-card-security-code">Security code</label>
-							<input class="input input-border" type="text" name="credit-card-security-code" id="credit-card-security-code">
+							<input class="input input-border" type="text" name="credit-card-security-code" id="credit-card-security-code" required="required">
 
 							<fieldset class="fieldset expiration-date">
 								<legend>Expiration date</legend>
 								<label class="label hide" for="month">month</label>
 								<br />
-								<select name="month" id="month">
+								<select name="month" id="month" required="required">
 									<option value="">month</option>
 									<option value="january">01-January</option>
 									<option value="february">02-February</option>
@@ -79,7 +78,7 @@
 								</select>
 
 								<label class="label hide" for="year">year</label>
-								<select name="year" id="year">
+								<select name="year" id="year" required="required">
 									<option value="">year</option>
 									<option value="2013">2013</option>
 									<option value="2014">2014</option>
@@ -103,6 +102,15 @@
 			</div>
 
 		</div>
+
+		<script src="./assets/js/lib/jquery.js"></script>
+
+		<script>
+		  Modernizr.load({
+		    test: Modernizr.input.required,
+		    nope: ['./assets/js/lib/jquery.validate.js',  './assets/js/script.js']
+		  });
+		</script>
 
 	</BODY>
 </HTML>
