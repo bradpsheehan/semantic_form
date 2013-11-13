@@ -84,7 +84,6 @@ h2 {
   border: 5px #ffffff solid;
   font-size: 12px;
 }
-
 .fieldset {
   border: 0;
   position: relative;
@@ -100,7 +99,7 @@ h2 {
     &:before {
       display: none;
     };
-    margin-left: 35px;
+    width: 50%;
     @extend label;
     legend {
       margin-bottom: -25px;
@@ -111,26 +110,37 @@ h2 {
   margin-bottom: 5%;
   background-color: #f3f5f5;
   border-radius: 6px;
-  padding-top: 5%; 
-  padding-bottom: 5%; 
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  list-style-type: none;
+  li {
+    position: relative;
+  }
 }
 .input-append {
-  height: 25px;
   min-width: 16px;
-  width: auto;
   label {
     margin: 0;
-  };
-  input {
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  input[type="text"] {
     border-style: none;
     border-top: 2px solid #E4E4E4;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     height: 25px;
     margin-right: 0;
-    margin-left: 35px;
-    width: 310px;
-  };
+    width: 74%;
+    position: absolute;
+  }
 }
 .add-on {
   border-top: 2px solid #E4E4E4;
@@ -147,17 +157,10 @@ h2 {
   text-shadow: 0 1px 0 #ffffff;
   background-color: #fafafa;
 }
-/*.submit-button {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 20%;
-}*/
 label {
   color: #12617b;
   font-size: 12px;
   line-height: 25px;
-  margin-left: 32px;
   text-shadow: 1px 1px white;
 }
 input[type="text"], input[type=email], input[type="password"], button[type="submit"], textarea, select { 
@@ -172,10 +175,9 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, but
   -ms-transition: box-shadow 0.60s ease-in-out;
   -o-transition: box-shadow 0.60s ease-in-out;
 }
-input {
-  width: 410px;
-  margin-left: auto;
-  margin-right: auto;
+input[type="text"], input[type=email], input[type="password"] {
+  @extend .input-border;
+  width: 100%;
   border-style: none;
   display: block;
   margin-bottom: 15px;
@@ -191,10 +193,13 @@ input {
 .pull-left {
   float: left;
 }
+.pull-right {
+  float: right;
+}
 .hide {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
 button.submit {
     background-color: #68b12f;
@@ -217,16 +222,73 @@ button.submit {
     padding: 6px 20px;
     text-align: center;
     text-shadow: 0 -1px 0 #396715;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 button.submit:hover {
     opacity:.85;
     cursor: pointer;
 }
 button.submit:active {
-    border: 1px solid #20911e;
-    box-shadow: 0 0 10px 5px #356b0b inset;
-    -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
-    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
-    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
-    -o-box-shadow: 0 0 10px 5px #356b0b inset;
+  border: 1px solid #20911e;
+  box-shadow: 0 0 10px 5px #356b0b inset;
+  -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+  -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+  -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+  -o-box-shadow: 0 0 10px 5px #356b0b inset;
 }
+label.error {
+  background-color: #F3E6E6;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 0 0 5px red;
+  border: 1px solid red;
+  padding: 5px;
+  position: absolute;
+  left: 100%;
+  width: 250px;
+  top: 25px;
+}
+.card-suffix {
+  display: inline-block;
+  vertical-align: middle;
+  background:url('../images/sprite.png');
+  height:30px;
+  width:150px;
+}
+
+#card-default {
+  background-position:-0px -90px;
+}
+
+.card-amex {
+  background-position: -0px -125px;
+}
+
+.card-visa {
+  background-position: -0px -155px;
+}
+
+.card-discover {
+  background-position: -0px -187px;
+}
+
+.card-master {
+  background-position: -0px -220px;
+}
+.security-suffix {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 240px;
+  background:url('../images/sprite.png');
+  height:30px;
+  width:70px;
+}
+#security-default {
+  background-position: -0px -283px
+}
+label#credit-card-number {
+  width: 50%;
+}
+

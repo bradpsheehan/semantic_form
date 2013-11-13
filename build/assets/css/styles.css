@@ -130,7 +130,7 @@ h2 {
     content: attr(data-number);
     display: inline-block; }
   .fieldset .fieldset {
-    margin-left: 35px; }
+    width: 50%; }
     .fieldset .fieldset:before {
       display: none; }
     .fieldset .fieldset legend {
@@ -141,23 +141,30 @@ h2 {
   background-color: #f3f5f5;
   border-radius: 6px;
   padding-top: 5%;
-  padding-bottom: 5%; }
+  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  list-style-type: none; }
+  .block li {
+    position: relative; }
 
 .input-append {
-  height: 25px;
-  min-width: 16px;
-  width: auto; }
+  min-width: 16px; }
   .input-append label, .input-append .fieldset .fieldset, .fieldset .input-append .fieldset {
     margin: 0; }
-  .input-append input {
+  .input-append:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .input-append input[type="text"] {
     border-style: none;
     border-top: 2px solid #E4E4E4;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     height: 25px;
     margin-right: 0;
-    margin-left: 35px;
-    width: 310px; }
+    width: 74%;
+    position: absolute; }
 
 .add-on {
   border-top: 2px solid #E4E4E4;
@@ -174,17 +181,10 @@ h2 {
   text-shadow: 0 1px 0 #ffffff;
   background-color: #fafafa; }
 
-/*.submit-button {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 20%;
-}*/
 label, .fieldset .fieldset {
   color: #12617b;
   font-size: 12px;
   line-height: 25px;
-  margin-left: 32px;
   text-shadow: 1px 1px white; }
 
 input[type="text"], input[type=email], input[type="password"], button[type="submit"], textarea, select {
@@ -199,15 +199,13 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, but
   -ms-transition: box-shadow 0.60s ease-in-out;
   -o-transition: box-shadow 0.60s ease-in-out; }
 
-input {
-  width: 410px;
-  margin-left: auto;
-  margin-right: auto;
+input[type="text"], input[type=email], input[type="password"] {
+  width: 100%;
   border-style: none;
   display: block;
   margin-bottom: 15px; }
 
-.input-border {
+.input-border, input[type="text"], input[type=email], input[type="password"] {
   border-top: 2px solid #E4E4E4;
   border-radius: 4px;
   height: 25px; }
@@ -218,10 +216,13 @@ input {
 .pull-left {
   float: left; }
 
+.pull-right {
+  float: right; }
+
 .hide {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important; }
+  position: absolute;
+  top: -9999px;
+  left: -9999px; }
 
 button.submit {
   background-color: #68b12f;
@@ -243,7 +244,10 @@ button.submit {
   font-weight: bold;
   padding: 6px 20px;
   text-align: center;
-  text-shadow: 0 -1px 0 #396715; }
+  text-shadow: 0 -1px 0 #396715;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
 
 button.submit:hover {
   opacity: .85;
@@ -256,3 +260,51 @@ button.submit:active {
   -moz-box-shadow: 0 0 10px 5px #356b0b inset;
   -ms-box-shadow: 0 0 10px 5px #356b0b inset;
   -o-box-shadow: 0 0 10px 5px #356b0b inset; }
+
+label.error, .fieldset .error.fieldset {
+  background-color: #F3E6E6;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 0 0 5px red;
+  border: 1px solid red;
+  padding: 5px;
+  position: absolute;
+  left: 100%;
+  width: 250px;
+  top: 25px; }
+
+.card-suffix {
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../images/sprite.png");
+  height: 30px;
+  width: 150px; }
+
+#card-default {
+  background-position: -0px -90px; }
+
+.card-amex {
+  background-position: -0px -125px; }
+
+.card-visa {
+  background-position: -0px -155px; }
+
+.card-discover {
+  background-position: -0px -187px; }
+
+.card-master {
+  background-position: -0px -220px; }
+
+.security-suffix {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 240px;
+  background: url("../images/sprite.png");
+  height: 30px;
+  width: 70px; }
+
+#security-default {
+  background-position: 0px -283px; }
+
+label#credit-card-number, .fieldset #credit-card-number.fieldset {
+  width: 50%; }
