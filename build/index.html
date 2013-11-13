@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<HTML>
+<HTML class="no-js">
 	<HEAD>
 		<TITLE>AUX Form Challenge</TITLE>
 		<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
@@ -56,8 +56,27 @@
 						<ul class="block">
 							<li>
 								<label for="credit-card-number">Card number</label>
-								<input class="input input-border" type="text" name="credit-card-number" id="credit-card-number" required="required">
-								<span class="card-suffix card-visa"></span>
+								<div class="card-number">
+									<input class="input input-border" type="text" name="credit-card-number" id="credit-card-number" required="required">
+									<div class="card-suffix">
+										<div class="credit-card">
+											<input id="card-amex" type="radio" name="amex" id="amex">
+											<label for="amex">amex</label>
+										</div>
+										<div class="credit-card">
+											<input id="card-visa" type="radio" name="visa" id="visa">
+											<label for="visa">visa</label>
+										</div>
+										<div class="credit-card">
+											<input id="card-discover" type="radio" name="discover" id="discover">
+											<label for="discover">discover</label>
+										</div>
+										<div class="credit-card">
+											<input id="card-master" type="radio" name="master" id="master">
+											<label for="master">master</label>
+										</div>
+									</div>
+								</div>
 							</li>
 							<li>
 								<label for="credit-card-security-code">Security code</label>
@@ -98,7 +117,6 @@
 									<option value="2021">2021</option>
 									<option value="2022">2022</option>
 								</select>
-
 							</fieldset>
 						</ul>
 					</fieldset>
