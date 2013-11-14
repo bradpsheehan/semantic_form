@@ -77,9 +77,30 @@ h2 {
   background-color: #12617b;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  height: 100px;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background: #539bb8;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #539bb8 0%, #0e6881 1%, #297e96 1%, #3f92aa 2%, #27829b 2%, #197993 3%, #157792 3%, #15738e 26%, #125f77 90%, #125d77 97%, #135e76 98%, #186079 99%, #005571 99%, #0d6782 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #539bb8), color-stop(1%, #0e6881), color-stop(1%, #297e96), color-stop(2%, #3f92aa), color-stop(2%, #27829b), color-stop(3%, #197993), color-stop(3%, #157792), color-stop(26%, #15738e), color-stop(90%, #125f77), color-stop(97%, #125d77), color-stop(98%, #135e76), color-stop(99%, #186079), color-stop(99%, #005571), color-stop(100%, #0d6782));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #539bb8 0%, #0e6881 1%, #297e96 1%, #3f92aa 2%, #27829b 2%, #197993 3%, #157792 3%, #15738e 26%, #125f77 90%, #125d77 97%, #135e76 98%, #186079 99%, #005571 99%, #0d6782 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #539bb8 0%, #0e6881 1%, #297e96 1%, #3f92aa 2%, #27829b 2%, #197993 3%, #157792 3%, #15738e 26%, #125f77 90%, #125d77 97%, #135e76 98%, #186079 99%, #005571 99%, #0d6782 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #539bb8 0%, #0e6881 1%, #297e96 1%, #3f92aa 2%, #27829b 2%, #197993 3%, #157792 3%, #15738e 26%, #125f77 90%, #125d77 97%, #135e76 98%, #186079 99%, #005571 99%, #0d6782 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #539bb8 0%, #0e6881 1%, #297e96 1%, #3f92aa 2%, #27829b 2%, #197993 3%, #157792 3%, #15738e 26%, #125f77 90%, #125d77 97%, #135e76 98%, #186079 99%, #005571 99%, #0d6782 100%);
+  /* W3C */
+  border: 1px solid #12617b;
+  box-shadow: inset 0 1px 0 0 #7991B6;
+  -webkit-box-shadow: 0 1px 0 0 #7991b6 inset;
+  -moz-box-shadow: 0 1px 0 0 #7991B6 inset;
+  -ms-box-shadow: 0 1px 0 0 #7991B6 inset;
+  -o-box-shadow: 0 1px 0 0 #7991B6 inset; }
 
 .header-content {
   display: block;
@@ -169,7 +190,7 @@ h2 {
   border-top: 2px solid #E4E4E4;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  color: #8f8f96;
+  color: #A9A9AD;
   width: auto;
   min-width: 16px;
   padding: 4px 5px;
@@ -271,7 +292,9 @@ label.error, .fieldset .error.fieldset {
   position: absolute;
   left: 100%;
   width: 250px;
-  top: 25px; }
+  text-align: center;
+  top: 25px;
+  opacity: .95; }
 
 .card-suffix {
   display: inline-block;
@@ -349,3 +372,20 @@ label.error, .fieldset .error.fieldset {
 
 #cvv-front {
   background-position: 0px -326px; }
+
+#credit-card-number + label.error, .fieldset #credit-card-number + .error.fieldset {
+  left: -67%; }
+
+#credit-card-security-code + label.error, .fieldset #credit-card-security-code + .error.fieldset {
+  left: -67%; }
+
+#month + label.error, .fieldset #month + .error.fieldset {
+  top: 23%;
+  left: -133%; }
+
+#year + label.error, .fieldset #year + .error.fieldset {
+  top: 22%;
+  left: 92%; }
+
+.js .card-suffix input[type="radio"] {
+  -webkit-appearance: none; }

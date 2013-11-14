@@ -24,7 +24,7 @@ $("#portfolio-form").validate({
     },
     "password":                  "For your security, a password is required",
     "credit-card-number":        "Your credit card number is required",
-    "credit-card-security-code": "The three digit security code located on the back of your card",
+    "credit-card-security-code": "Your card's security code is required",
     "month":                     "Select card expiration month",
     "year":                      "Select card expiration year"
   },

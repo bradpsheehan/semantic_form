@@ -60,7 +60,7 @@
 									<input class="input input-border" type="text" name="credit-card-number" id="credit-card-number" required="required">
 									<div class="card-suffix">
 										<div class="credit-card">
-											<input id="card-amex" type="radio" name="credit-card-type">
+											<input id="card-amex" type="radio" name="credit-card-type" required="required">
 											<label for="card-amex">amex</label>
 										</div>
 										<div class="credit-card">
@@ -139,7 +139,7 @@
 		<script>
 		  Modernizr.load({
 		    test: Modernizr.input.required,
-		    nope: ['./assets/js/lib/jquery.validate.js', './assets/js/script.js'],
+		    yep: ['./assets/js/lib/jquery.validate.js', './assets/js/script.js'],
 		    both: ['./assets/js/creditcard.js']
 		  });
 		</script>
