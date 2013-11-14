@@ -112,8 +112,8 @@ h2 {
   border-radius: 6px;
   padding-top: 5%;
   padding-bottom: 5%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 8%;
+  padding-right: 8%;
   list-style-type: none;
   li {
     position: relative;
@@ -134,12 +134,11 @@ h2 {
   input[type="text"] {
     border-style: none;
     border-top: 2px solid #E4E4E4;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     height: 25px;
     margin-right: 0;
     width: 74%;
-    position: absolute;
   }
 }
 .add-on {
@@ -162,6 +161,7 @@ label {
   font-size: 12px;
   line-height: 25px;
   text-shadow: 1px 1px white;
+  display: block;
 }
 input[type="text"], input[type=email], input[type="password"], button[type="submit"], textarea, select { 
     outline: none;
@@ -179,7 +179,6 @@ input[type="text"], input[type=email], input[type="password"] {
   @extend .input-border;
   width: 100%;
   border-style: none;
-  display: block;
   margin-bottom: 15px;
 }
 .input-border {
@@ -277,37 +276,74 @@ label.error {
     position: relative;
   }
 }
+
 #card-amex+label {
-  background-position: -0px -116px;
+  background-position: -0px -200px;
 }
 #card-visa+label {
-  background-position: -48px -116px;
+  background-position: -48px -158px;
 }
 #card-discover+label {
-  background-position: -96px -116px;
+  background-position: -96px -200px;
 }
 #card-master+label {
-  background-position: -144px -116px;
+  background-position: -144px -200px;
+}
+
+#card-amex:checked {
+  +label {
+    background-position: -0px -116px;
+  }
+}
+#card-visa:checked {
+  +label {
+    background-position: -48px -116px;
+  }
+}
+#card-discover:checked {
+  +label {
+    background-position: -96px -116px;
+  }
+}
+#card-master:checked {
+  +label {
+    background-position: -144px -116px;
+  }
 }
 .security-suffix {
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 240px;
-  background:url('../images/sprite.png');
-  height:30px;
-  width:70px;
+  vertical-align: bottom;
+
+  .cvv-icon {
+    display: inline-block;
+    position: relative;
+    background: url('../images/sprite.png');
+    height: 38px;
+    width: 72px;
+  }
 }
-input#credit-card-number {
+#credit-card-number {
   display: inline-block;
   margin-bottom: 0;
   margin-right: 2%;
   vertical-align: bottom;
   width: 45%;
 }
-input#credit-card-security-code {
+#credit-card-security-code {
   width: 14%;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 2%;
+  vertical-align: bottom;
 }
-.card-number {
-  margin-bottom: 45px;
+.card-info {
+  margin-bottom: 30px;
+}
+#cvv-back {
+  background-position: 0px -368px;
+}
+#cvv-front {
+  background-position: 0px -326px;
+
 }
 

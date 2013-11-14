@@ -27,8 +27,8 @@
 							<li>
 								<label for="portfolio-address">Portfolio address</label>
 								<div class="input-append">
-									<label class="add-on pull-right" for="portfolio-address">.sample.com</label>
 									<input class="pull-left test" type="text" name="portfolio-address" id="portfolio-address" required="required">
+									<label class="add-on pull-left" for="portfolio-address">.sample.com</label>
 							</li>
 						</ul>
 					</fieldset>
@@ -56,31 +56,37 @@
 						<ul class="block">
 							<li>
 								<label for="credit-card-number">Card number</label>
-								<div class="card-number">
+								<div class="card-info">
 									<input class="input input-border" type="text" name="credit-card-number" id="credit-card-number" required="required">
 									<div class="card-suffix">
 										<div class="credit-card">
-											<input id="card-amex" type="radio" name="amex" id="amex">
-											<label for="amex">amex</label>
+											<input id="card-amex" type="radio" name="credit-card-type">
+											<label for="card-amex">amex</label>
 										</div>
 										<div class="credit-card">
-											<input id="card-visa" type="radio" name="visa" id="visa">
-											<label for="visa">visa</label>
+											<input id="card-visa" type="radio" name="credit-card-type">
+											<label for="card-visa">visa</label>
 										</div>
 										<div class="credit-card">
-											<input id="card-discover" type="radio" name="discover" id="discover">
-											<label for="discover">discover</label>
+											<input id="card-discover" type="radio" name="credit-card-type">
+											<label for="card-discover">discover</label>
 										</div>
 										<div class="credit-card">
-											<input id="card-master" type="radio" name="master" id="master">
-											<label for="master">master</label>
+											<input id="card-master" type="radio" name="credit-card-type">
+											<label for="card-master">master</label>
 										</div>
 									</div>
 								</div>
 							</li>
 							<li>
-								<label for="credit-card-security-code">Security code</label>
-								<input class="input input-border" type="text" name="credit-card-security-code" id="credit-card-security-code" required="required">
+								<div class="card-info">
+									<label for="credit-card-security-code">Security code</label>
+									<input class="input input-border" type="text" name="credit-card-security-code" id="credit-card-security-code" required="required">
+									<div class="security-suffix">
+										<div class="cvv-icon" id="cvv-back"></div>
+										<div class="cvv-icon" id="cvv-front"></div>
+									</div>
+								</div>
 							</li>
 
 							<fieldset class="fieldset expiration-date">
@@ -133,7 +139,8 @@
 		<script>
 		  Modernizr.load({
 		    test: Modernizr.input.required,
-		    yep: ['./assets/js/lib/jquery.validate.js',  './assets/js/script.js']
+		    nope: ['./assets/js/lib/jquery.validate.js', './assets/js/script.js'],
+		    both: ['./assets/js/creditcard.js']
 		  });
 		</script>
 
