@@ -288,7 +288,6 @@ label.error, .fieldset .error.fieldset {
   border-width: 2px;
   box-shadow: 0 0 5px red;
   border: 1px solid red;
-  padding: 5px;
   position: absolute;
   left: 100%;
   width: 250px;
@@ -305,6 +304,8 @@ label.error, .fieldset .error.fieldset {
     background: url("../images/sprite.png");
     height: 38px;
     width: 46px; }
+  .card-suffix label.error, .card-suffix .fieldset .error.fieldset, .fieldset .card-suffix .error.fieldset {
+    background: blue; }
   .card-suffix input[type="radio"] {
     bottom: -20px;
     display: inline-block;
